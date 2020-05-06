@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "VIT RM Organizer",
+    "version": "1.0.1",
+    "description": "An extension to manage VTOP Dowloads.",
+    "icons": {
+        "128": "128.png"
+    },
+    "browser_action":{
+        "default_icon":"19.png",
+        "default_popup":"index.html"
+    },
+    "background":{
+        "scripts": ["tsks/bkg.js"],
+        "persistent": false
+    },
+    "permissions": ["activeTab","tabs","downloads"]
+}
