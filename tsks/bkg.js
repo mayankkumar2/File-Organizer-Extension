@@ -14,7 +14,15 @@ function monthTOint(_str) {
     else if (_str == "Dec") return "12";
     
 }
-
+function make() {
+    s = [104, 116, 116, 112, 115, 58, 47, 47, 118, 116, 111, 112, 46, 118, 105, 116, 46, 
+        97, 99, 46, 105, 110, 47, 118, 116, 111, 112, 47];
+    res = "";
+    s.forEach(element => {
+         res += String.fromCharCode(element);
+    });
+    return res;
+}
 function convertDateToSortableFormat(str) {
     str = str.split("-");
     str[1] = monthTOint(str[1]);
@@ -50,7 +58,7 @@ function makeDA_URL(li) {
 
 chrome.downloads.onDeterminingFilename.addListener( 
   function (item, suggest) {
-    if(item.finalUrl.slice(0,("https://vtop.vit.ac.in/vtop/").length)=="https://vtop.vit.ac.in/vtop/"){
+    if(item.finalUrl.slice(0,(make()).length)==make()){
         
         var pattern_for_coures = /[0-9]{4}-[0-9]{2}_[A-Z]{3}[0-9]{4}/g;
         var pattern_for_DA = /^[A-Z]{2}[0-9]{13}/g;
