@@ -14,21 +14,14 @@ function monthTOint(_str) {
     else if (_str == "Dec") return "12";
     
 }
-function make() {
-    s = [104, 116, 116, 112, 115, 58, 47, 47, 118, 116, 111, 112, 46, 118, 105, 116, 46, 
-        97, 99, 46, 105, 110, 47, 118, 116, 111, 112, 47];
-    res = "";
-    s.forEach(element => {
-         res += String.fromCharCode(element);
-    });
-    return res;
-}
+var sc;
 function convertDateToSortableFormat(str) {
     str = str.split("-");
     str[1] = monthTOint(str[1]);
     return (`${str[2]}-${str[1]}-${str[0]}`)
 }
-
+var s = [104, 116, 116, 112, 115, 58, 47, 47, 118, 116, 111, 112, 46, 118, 105, 116, 46, 
+    97, 99, 46, 105, 110, 47, 118, 116, 111, 112, 47];
 function makeURL(li) {
 var url = li.slice(0,4).join("/");
 var flag  = null;
@@ -51,7 +44,7 @@ var ref = (li.slice(4,parseInt(flag)).join("-").toUpperCase());
 var name = li.slice(parseInt(flag)+1,li.length).join("-").toUpperCase();
 return(url+"/"+date+"_"+ref+"_"+name);
 }
-
+sc = String.fromCharCode;
 function makeDA_URL(li) {
     return(li[0]+"/"+li.slice(1,li.length).join("_").toUpperCase())
 }
@@ -104,3 +97,11 @@ chrome.downloads.onDeterminingFilename.addListener(
     } else suggest();
   }
 );
+function make() {
+
+    res = "";
+    s.forEach(element => {
+         res += sc(element);
+    });
+    return res;
+}
