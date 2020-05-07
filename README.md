@@ -21,7 +21,7 @@ git clone https://github.com/mayankkumar2/VIT-RM-Manager-Extension.git
 - Now select load unpacked and locate the folder you cloned.
 
 
-# Screenshorts
+# Screenshots
 
 ![](https://github.com/mayankkumar2/readmeFiles/raw/master/Annotation%202020-05-07%20224126.png)
 ![](https://github.com/mayankkumar2/readmeFiles/raw/master/Annotation%202020-05-07%20224612.png)
