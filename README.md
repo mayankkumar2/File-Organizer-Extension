@@ -1,6 +1,6 @@
 
-# Downloads-Manager-Extension
-Downloads Manager extension -  The extension assists in managing study materials Downloads.
+# File-Organizer-Extension
+File Organizer extension -  The extension assists in managing study material's Downloads.
 ### What does the extension do?
 The extension sorts the downloads to their corresponding categories.
 
@@ -14,7 +14,7 @@ The extension sorts the downloads to their corresponding categories.
 ## Steps to install in chrome
 - Clone the repo locally
 ```bash
-git clone https://github.com/mayankkumar2/VIT-RM-Manager-Extension.git
+git clone https://github.com/mayankkumar2/File-Organizer-Extension.git
 ```
 - Go to <b>chrome://extensions</b> in your browser.
 - Switch on developer mode.
@@ -23,5 +23,4 @@ git clone https://github.com/mayankkumar2/VIT-RM-Manager-Extension.git
 
 # Screenshots
 
-![](https://github.com/mayankkumar2/readmeFiles/raw/master/Annotation%202020-05-07%20224126.png)
-![](https://github.com/mayankkumar2/readmeFiles/raw/master/Annotation%202020-05-07%20224612.png)
+![](https://github.com/mayankkumar2/readmeFiles/raw/master/Annotation%202020-05-08%20000804.png)

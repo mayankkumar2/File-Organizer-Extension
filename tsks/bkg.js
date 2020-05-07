@@ -59,17 +59,17 @@ chrome.downloads.onDeterminingFilename.addListener(
         var pattern_for_your_DA = /^[0-9]{2}[A-Z]{3}[0-9]{4}/
         if(pattern_for_coures.test(item.filename)){
             var li = (item.filename.split("_"));
-        suggest({filename: "VIT-RM-MANAGER/Reference Materials/"+makeURL(li),conflictAction:"overwrite"});
+        suggest({filename: "FILE ORGANIZER/Reference Materials/"+makeURL(li),conflictAction:"overwrite"});
         
         } else if (pattern_for_DA.test(item.filename)){
         
             var li = (item.filename.split("_"));
-        suggest({filename: "VIT-RM-MANAGER/Digital Assignments/"+makeDA_URL(li),conflictAction:"overwrite"});
+        suggest({filename: "FILE ORGANIZER/Digital Assignments/"+makeDA_URL(li),conflictAction:"overwrite"});
         
         } else if (pattern_for_syllabus.test(item.filename)) {
         
         var li = (item.filename.split("_"));
-        suggest({filename: "VIT-RM-MANAGER/Syllabus/"+makeDA_URL(li),conflictAction:"overwrite"});
+        suggest({filename: "FILE ORGANIZER/Syllabus/"+makeDA_URL(li),conflictAction:"overwrite"});
         
         } else if (patternForAllMarerialZip.test(item.filename) && (/.zip$/.test(item.filename))){
 
@@ -80,8 +80,8 @@ chrome.downloads.onDeterminingFilename.addListener(
             secLevel = secLevel.slice(1,secLevel.length-1)
             var classCode = patternForClassCode.exec(item.filename)[0]
             classCode = classCode.slice(1,classCode.length-1)
-            //console.log(`VIT-RM-MANAGER/All Materials/${li[0]}/${secLevel}/${patternForClassCode.exec(item.filename)[0]}/`+item.filename)
-            suggest({filename: `VIT-RM-MANAGER/All Materials and General Materials/${li[0]}/${secLevel}/${classCode}/`+item.filename,conflictAction:"overwrite"});
+            //console.log(`FILE ORGANIZER/All Materials/${li[0]}/${secLevel}/${patternForClassCode.exec(item.filename)[0]}/`+item.filename)
+            suggest({filename: `FILE ORGANIZER/All Materials and General Materials/${li[0]}/${secLevel}/${classCode}/`+item.filename,conflictAction:"overwrite"});
         
         } else if (pattern_for_your_DA.test(item.filename)) {
             let regid = pattern_for_your_DA.exec(item.filename)
@@ -89,9 +89,9 @@ chrome.downloads.onDeterminingFilename.addListener(
             var classCode = patternForClassCode.exec(item.filename)[0]
             classCode = classCode.slice(1,classCode.length-1)
 
-            suggest({filename: `VIT-RM-MANAGER/Your DAs/${classCode}/${regid}/${item.filename}`,conflictAction:"overwrite"});
+            suggest({filename: `FILE ORGANIZER/Your DAs/${classCode}/${regid}/${item.filename}`,conflictAction:"overwrite"});
         } else {
-            suggest({filename: `VIT-RM-MANAGER/Others/`+item.filename,conflictAction:"overwrite"});
+            suggest({filename: `FILE ORGANIZER/Others/`+item.filename,conflictAction:"overwrite"});
         }
     } else suggest();
   }

@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "VIT RM Organizer",
+    "name": "File Organizer",
     "version": "1.5.1",
-    "description": "An extension to manage VTOP Dowloads.",
+    "description": "An extension to manage study material Dowloads.",
     "icons": {
         "128": "128.png"
     },
