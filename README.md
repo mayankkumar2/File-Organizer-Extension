@@ -1,6 +1,6 @@
 
-# VIT-RM-Manager-Extension
-VIT RM Manager extension -  The extension assists in managing VIT - VTOP Downloads.
+# Downloads-Manager-Extension
+Downloads Manager extension -  The extension assists in managing study materials Downloads.
 ### What does the extension do?
 The extension sorts the downloads to their corresponding categories.
 
