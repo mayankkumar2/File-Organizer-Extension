@@ -88,7 +88,7 @@ chrome.downloads.onDeterminingFilename.addListener(
             let patternForClassCode = /_[A-Z]{2}[0-9]{13}_/ 
             var classCode = patternForClassCode.exec(item.filename)[0]
             classCode = classCode.slice(1,classCode.length-1)
-            
+
             suggest({filename: `VIT-RM-MANAGER/Your DAs/${classCode}/${regid}/${item.filename}`,conflictAction:"overwrite"});
         } else {
             suggest({filename: `VIT-RM-MANAGER/Others/`+item.filename,conflictAction:"overwrite"});
