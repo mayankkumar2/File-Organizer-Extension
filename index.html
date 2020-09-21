@@ -1,56 +1,67 @@
 <html>
-    <head>
-        <title>VIT RM Manager</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    
-        <style>
-            body {
-                height: 400;
-                width: 300;
-                border-radius: 10px;
-            }
 
-            div.mainPage {
-                display:flex;
-                flex-direction: column;
-            }
-            h1, h3, h2, h5, h4{
-                font-family: 'Montserrat', sans-serif;
-                color: #403f3f;
-                font-weight: bold;
-            }
-            .header, .body {
-                display:flex;
-                flex-direction:column;
-                align-items:center;
+<head>
+    <title>VIT RM Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-            }
-            div.body {
-                display:flex;
-                flex-direction:column;
-                align-items:center;
-                border-width: 0.73;
-                padding: 10px;
-                border-style: solid;
-                border-radius: 30px;
-                border-color: #403f3f;
-            }
-            .btn.orange {
-              background-color: #e67e22;
-              font-family: 'Montserrat', sans-serif;
-              color: white;
-              height: 50;
-              margin: 10;
-              border-radius: 30;
-            }
-
-            .btn.orange:hover, .btn.orange:focus {
-              background-color: #d35400;
-            }
-             span {
-                font-family:  'Montserrat', sans-serif;
-            }
-            /* div.btn {
+    <style>
+        body {
+            height: 400;
+            width: 300;
+            border-radius: 10px;
+        }
+        
+        div.mainPage {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1,
+        h3,
+        h2,
+        h5,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #403f3f;
+            font-weight: bold;
+        }
+        
+        .header,
+        .body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        div.body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-width: 0.73;
+            padding: 10px;
+            border-style: solid;
+            border-radius: 30px;
+            border-color: #403f3f;
+        }
+        
+        .btn.orange {
+            background-color: #e67e22;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            height: 50;
+            margin: 10;
+            border-radius: 30;
+        }
+        
+        .btn.orange:hover,
+        .btn.orange:focus {
+            background-color: #d35400;
+        }
+        
+        span {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* div.btn {
                 display:flex;
                 flex-direction:column;
                 align-items:center;
@@ -65,84 +76,89 @@
                     color: white;
                     text-decoration: none;
                 } */
-                
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 14px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        div.btn {
+            padding-left: 50px;
+            padding-top: 10;
+        }
+    </style>
 
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+</head>
 
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 14px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-div.btn {
-    padding-left: 50px;
-    padding-top: 10;
-}
-
-
-        </style>
-
-    </head>
-    <body>
+<body>
     <div class="mainPage">
-            <div class="header">
-                <img src="logo.png" style="height: 100px;width: 100px;" />
-                <h1>File Organizer</h1>
-            </div>
-            <div class="body">
-                <h2>
-                    Hey! you are all setup.
-                </h2>
-                <h3>
-                    Keep an eye on your Downloads directory, chrome's default.
-                </h3>
-                <h5>
-                    all the changes will be made to the directory selected for the download.
-                </h5>
-            </div>
-            
-              <!-- <div class="btn">
+        <div class="header">
+            <img src="logo.png" style="height: 100px;width: 100px;" />
+            <h1>File Organizer</h1>
+        </div>
+        <div class="body">
+            <h2>
+                Hey! you are all setup.
+            </h2>
+            <h3>
+                Keep an eye on your Downloads directory, chrome's default.
+            </h3>
+            <h5>
+                all the changes will be made to the directory selected for the download.
+            </h5>
+        </div>
+
+        <!-- <div class="btn">
                   <a href="#" class="download"><span>Open Downloads Folder</span></a>
               </div>
                -->
-               <div class="btn">
-                <button class="button" style="vertical-align:middle" id="btn1"><span>Open Downloads </span></button>
-
-            </div>
-               
-
+        <div class="btn">
+            <button class="button" style="vertical-align:middle" id="btn1"><span>Open Downloads </span></button>
         </div>
-        <script src="popup.js"></script>
 
-    </body>
+        <div>
+            <a href="register.html">Click here to save the list of your courses</a>
+        </div>
+
+
+    </div>
+    <script src="popup.js"></script>
+
+</body>
+
 </html>

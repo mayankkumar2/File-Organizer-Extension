@@ -1,18 +1,18 @@
 {
     "manifest_version": 2,
     "name": "File Organizer",
-    "version": "1.5.1",
+    "version": "2.0.1",
     "description": "An extension to manage study material Dowloads.",
     "icons": {
         "128": "128.png"
     },
-    "browser_action":{
-        "default_icon":"19.png",
-        "default_popup":"index.html"
+    "browser_action": {
+        "default_icon": "19.png",
+        "default_popup": "index.html"
     },
-    "background":{
+    "background": {
         "scripts": ["tsks/bkg.js"],
         "persistent": false
     },
-    "permissions": ["activeTab","tabs","downloads"]
+    "permissions": ["activeTab", "tabs", "downloads", "storage"]
 }
