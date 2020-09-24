@@ -50,7 +50,7 @@ let s = [104, 116, 116, 112, 115, 58, 47, 47, 118, 116, 111, 112, 46, 118, 105, 
 ];
 
 function makeURL(li) {
-    li[3] = (listOfCourses.includes(li[3])) ? "MyClass" : li[3];
+    li[3] = (listOfCourses.includes(li[3])) ? "MyClass-" + li[3] : li[3];
     let url = li.slice(0, 4).join("/");
     let flag = null;
     let datePattern = /[0-9]{2}-[A-Za-z]{3}-[0-9]{4}/;
@@ -110,7 +110,7 @@ chrome.downloads.onDeterminingFilename.addListener(
                 secLevel = secLevel.slice(1, secLevel.length - 1)
                 let classCode = patternForClassCode.exec(item.filename)[0]
                 classCode = classCode.slice(1, classCode.length - 1)
-                classCode = (listOfCourses.includes(classCode)) ? "MyClass" : classCode;
+                classCode = (listOfCourses.includes(classCode)) ? "MyClass-" + classCode : classCode;
 
                 //console.log(`FILE ORGANIZER/All Materials/${li[0]}/${secLevel}/${patternForClassCode.exec(item.filename)[0]}/`+item.filename)
                 suggest({ filename: `FILE ORGANIZER/All Materials and General Materials/${li[0]}/${secLevel}/${classCode}/` + item.filename, conflictAction: "overwrite" });
@@ -120,7 +120,7 @@ chrome.downloads.onDeterminingFilename.addListener(
                 let patternForClassCode = /_[A-Z]{2}[0-9]{13}_/
                 let classCode = patternForClassCode.exec(item.filename)[0]
                 classCode = classCode.slice(1, classCode.length - 1)
-                classCode = (listOfCourses.includes(classCode)) ? "MyClass" : classCode;
+                classCode = (listOfCourses.includes(classCode)) ? "MyClass-" + classCode : classCode;
                 suggest({ filename: `FILE ORGANIZER/Your DAs/${classCode}/${regid}/${item.filename}`, conflictAction: "overwrite" });
             } else {
                 suggest({ filename: `FILE ORGANIZER/Others/` + item.filename, conflictAction: "overwrite" });
